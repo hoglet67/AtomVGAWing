@@ -1,0 +1,67 @@
+##################################################################################
+## Atom VGA Wing V1
+##
+## Author: David Banks
+##
+##################################################################################
+
+INST AL1 IOB=TRUE;
+INST AH1 IOB=TRUE;
+INST BL1 IOB=TRUE;
+INST BH1 IOB=TRUE;
+INST L1 IOB=TRUE;
+INST atomhSync0 IOB=TRUE;
+INST atomvSync0 IOB=TRUE;
+
+# Crystal Clock - use 32MHz onboard oscillator
+NET "clock32" LOC = "P89" | IOSTANDARD = LVCMOS33 | PERIOD = 31.25ns ;
+
+NET "vsync" LOC = "P85" | IOSTANDARD = LVCMOS33; # LogicStart vsync
+NET "hsync" LOC = "P83" | IOSTANDARD = LVCMOS33; # LogicStart hsync
+NET "blue<0>" LOC = "P78" | IOSTANDARD = LVCMOS33; # LogicStart blue1
+NET "blue<1>" LOC = "P71" | IOSTANDARD = LVCMOS33; # LogicStart blue2
+NET "green<0>" LOC = "P68" | IOSTANDARD = LVCMOS33; # LogicStart green0
+NET "green<1>" LOC = "P66" | IOSTANDARD = LVCMOS33; # LogicStart green1
+NET "green<2>" LOC = "P63" | IOSTANDARD = LVCMOS33; # LogicStart green2
+NET "red<0>" LOC = "P61" | IOSTANDARD = LVCMOS33; # LogicStart red0
+NET "red<1>" LOC = "P58" | IOSTANDARD = LVCMOS33; # LogicStart red1
+NET "red<2>" LOC = "P54" | IOSTANDARD = LVCMOS33; # LogicStart red2
+
+NET "AL_P" LOC = "P2"    | IOSTANDARD = LVDS_25 | DIFF_TERM = FALSE;
+NET "AL_N" LOC = "P3"    | IOSTANDARD = LVDS_25 | DIFF_TERM = FALSE;
+NET "AH_P" LOC = "P4"    | IOSTANDARD = LVDS_25 | DIFF_TERM = FALSE;
+NET "AH_N" LOC = "P5"    | IOSTANDARD = LVDS_25 | DIFF_TERM = FALSE;
+NET "BL_P" LOC = "P9"    | IOSTANDARD = LVDS_25 | DIFF_TERM = FALSE;
+NET "BL_N" LOC = "P10"   | IOSTANDARD = LVDS_25 | DIFF_TERM = FALSE;
+NET "BH_P" LOC = "P11"   | IOSTANDARD = LVDS_25 | DIFF_TERM = FALSE;
+NET "BH_N" LOC = "P12"   | IOSTANDARD = LVDS_25 | DIFF_TERM = FALSE;
+NET "LUM_P" LOC = "P15"  | IOSTANDARD = LVDS_25 | DIFF_TERM = FALSE;
+NET "LUM_N" LOC = "P16"  | IOSTANDARD = LVDS_25 | DIFF_TERM = FALSE;
+
+NET "unused" LOC = "P17" | IOSTANDARD = LVCMOS33;
+NET "FS_N" LOC="P92"  | IOSTANDARD = LVCMOS33;
+NET "HS_N" LOC="P94"  | IOSTANDARD = LVCMOS33;
+NET "clamp" LOC="P95" | IOSTANDARD = LVCMOS33;
+
+NET "test<1>" LOC = "P40"| IOSTANDARD = LVCMOS33;
+NET "test<2>" LOC = "P53"| IOSTANDARD = LVCMOS33;
+NET "test<3>" LOC = "P57"| IOSTANDARD = LVCMOS33;
+NET "test<4>" LOC = "P60"| IOSTANDARD = LVCMOS33;
+NET "test<5>" LOC = "P62"| IOSTANDARD = LVCMOS33;
+NET "test<6>" LOC = "P65"| IOSTANDARD = LVCMOS33;
+
+NET "led<1>" LOC = "P67"| IOSTANDARD = LVCMOS33;
+NET "led<2>" LOC = "P70"| IOSTANDARD = LVCMOS33;
+NET "led<3>" LOC = "P79"| IOSTANDARD = LVCMOS33;
+NET "led<4>" LOC = "P84"| IOSTANDARD = LVCMOS33;
+
+NET "rst" LOC = "P86" | IOSTANDARD = LVCMOS33;
+
+NET "switch<1>" LOC="P23"  | IOSTANDARD = LVCMOS33 | PULLUP;
+NET "switch<2>" LOC="P25"  | IOSTANDARD = LVCMOS33 | PULLUP;
+NET "switch<3>" LOC="P26"  | IOSTANDARD = LVCMOS33 | PULLUP;
+NET "switch<4>" LOC="P32"  | IOSTANDARD = LVCMOS33 | PULLUP;
+NET "switch<5>" LOC="P33"  | IOSTANDARD = LVCMOS33 | PULLUP;
+NET "switch<6>" LOC="P34"  | IOSTANDARD = LVCMOS33 | PULLUP;
+NET "switch<7>" LOC="P35"  | IOSTANDARD = LVCMOS33 | PULLUP;
+NET "switch<8>" LOC="P36"  | IOSTANDARD = LVCMOS33 | PULLUP;
