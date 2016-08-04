@@ -295,7 +295,7 @@ begin
             --BUFF     1.5 1.5  0  0  0  0  1  1  1  1  1
             --ORANGE   2.0 1.0  0  1  1  0  1  1  1  0  0
              
-            R <= (NOT AL AND NOT AH AND BL AND NOT BH AND L) OR (NOT AL AND AH AND NOT BL AND NOT BH) OR (NOT AL AND AH AND NOT BL AND BH AND L) OR (NOT AL AND NOT AH AND NOT BL AND NOT BH AND L) OR (NOT AL AND AH AND BL AND NOT BH AND L);
+            R <= (NOT AL AND NOT AH AND BL AND NOT BH) OR (NOT AL AND AH AND NOT BL AND NOT BH) OR (NOT AL AND AH AND NOT BL AND BH) OR (NOT AL AND NOT AH AND NOT BL AND NOT BH AND L) OR (NOT AL AND AH AND BL AND NOT BH AND L);
 
             --                 AL AH BL BH  L  R G1 G2  B
             --YELLOW   1.5 1.0  0  0  1  0  X  1  1  1  0
