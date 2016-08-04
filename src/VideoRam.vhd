@@ -18,7 +18,7 @@ end VideoRam;
 architecture BEHAVIORAL of VideoRam is
 
 -- Shared memory
-    type ram_type is array (65535 downto 0) of std_logic_vector (3 downto 0);
+    type ram_type is array (48*1024-1 downto 0) of std_logic_vector (3 downto 0);
     shared variable RAM : ram_type;
 
 --attribute RAM_STYLE : string;
